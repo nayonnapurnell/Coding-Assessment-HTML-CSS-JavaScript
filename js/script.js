@@ -11,6 +11,8 @@ console.log("Sam, your questions");
 function startTimer(){
 
 }
+
+
 function addQuestion(){
   // create the question elements
 
@@ -42,6 +44,18 @@ function startQuiz(){
   // need a function call to start the timer
 
   // need a function call to present the question
+
+  //set display to either none or block*****
+
+  ans = [];
+  startSection.style.display = "block";
+  for(var i = 0)
 }
 
 // eventListener here // when i click the start button
+
+var answer = [];
+//querySelector gets you exactly one tag
+var startSection = document.querySelector();
+for(var i=0; i< 3; i++)
+

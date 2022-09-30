@@ -1,0 +1,23 @@
+
+/*Quiz Header*/
+h1{
+    text-align: center;
+}
+
+p{
+    text-align: center;
+}
+
+
+
+
+/*Start Quiz Button*/
+#start-quiz-button{
+    background-color: purple;
+    color: white;
+    font-size: 24px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
