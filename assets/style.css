@@ -1,11 +1,18 @@
+/*Quiz Home Page*/
 
-/*Quiz Header*/
-h1{
+/* High-Score and Timer Header */
+.page-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+/*Quiz Start Section*/
+.quiz-home-page{
     text-align: center;
 }
 
-p{
-    text-align: center;
+#game-title{
+    font-size: 32px;
 }
 
 /*Start Quiz Button*/
@@ -19,3 +26,16 @@ p{
     align-items: center;
 }
 
+
+footer{
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    font-size: 24px;
+    background-color: rgb(194, 129, 194);
+    
+   
+}
