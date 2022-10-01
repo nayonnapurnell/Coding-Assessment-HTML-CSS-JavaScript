@@ -30,6 +30,10 @@ GIVEN I am taking a code quiz,
 * WHEN the game is over
 * THEN I can save my initials and my score
 ```
+## Wireframe
+The following image is used to map out the main features and flow of the JavaScript quiz.
+
+![The structure for the developer to build the JavaScript Quiz.](./Assets/quiz-wireframe.png)
 
 ## Mock-Up
 

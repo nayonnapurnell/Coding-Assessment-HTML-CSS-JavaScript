@@ -1,11 +1,5 @@
-// this is the starting point for this commentary,
-// please add more steps
-// there may be more steps and corrections to be made in future
-console.log("Sam, your questions");
-// need a collection of objects that hold the questions
-// need to keep a count of the question that is displayed
-// need to keep score
-// need to keep the time
+var startButton = document.getElementById("start-quiz-button");
+
 
 
 function startTimer(){
@@ -14,6 +8,47 @@ function startTimer(){
 
 
 function addQuestion(){
+
+  var quizQuestions = [
+    {
+      id: 1,
+      question: "Commonly used data-types DO NOT include:",
+      answers: {
+        a: "Strings",
+        b: "Booleans",
+        c: "alerts",
+        d: "numbers"
+      },
+    },
+    {
+      id: 2,
+      question: "The condition in an if/else statement is enclosed within ____.",
+      answers: {
+      a: "quotes",
+      b: "curly brackets",
+      c: "parentheses",
+      d: "parentheses"
+    },
+    },
+    {
+      id: 3,
+      question: "Who invented JavaScript?",
+      answers: {
+      a: "Douglas Crockford",
+      b: "Sheryl Sandberg",
+      c: "Brendan Eich"
+    },
+    },
+    {
+      id: 4,
+      question: "Who invented JavaScript?",
+      answers: {
+      a: "Douglas Crockford",
+      b: "Sheryl Sandberg",
+      c: "Brendan Eich"
+    },
+    }
+  ]
   // create the question elements
 
   // modify the text/attributes
@@ -49,13 +84,13 @@ function startQuiz(){
 
   ans = [];
   startSection.style.display = "block";
-  for(var i = 0)
+  
 }
 
 // eventListener here // when i click the start button
 
 var answer = [];
 //querySelector gets you exactly one tag
-var startSection = document.querySelector();
-for(var i=0; i< 3; i++)
+
+
 
