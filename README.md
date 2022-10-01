@@ -33,7 +33,7 @@ GIVEN I am taking a code quiz,
 ## Wireframe
 The following image is used to map out the main features and flow of the JavaScript quiz.
 
-![The structure for the developer to build the JavaScript Quiz.](./Assets/quiz-wireframe.png)
+![](./assets/images/quiz-wireframe.png)
 
 ## Mock-Up
 
