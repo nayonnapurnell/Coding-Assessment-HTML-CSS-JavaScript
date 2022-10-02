@@ -8,23 +8,11 @@ var startingMinutes = 1;
 var time = startingMinutes * 60;
 var countDownTimer = document.querySelector('#time-Counter');
 
-
-//Hides quiz questions from the page
-for(i = 0; i <quizContent.length; i++){
-  quizContent[i].style.display = 'block';
-}
-
-//Create the quiz questions
-
-
 //Start Button Event Listener
 startButton.addEventListener("click", function(event){
   
-var interval = setInterval(startTimer, 1000);
-
-
-
 //Quiz Countdown Timer - 5 minutes
+var interval = setInterval(startTimer, 1000);
 function startTimer() {
   var minutes = Math.floor(time/60);
   var seconds = time % 60;
@@ -36,11 +24,14 @@ function startTimer() {
     clearInterval(interval);
   } 
 }
-
-
 })
 
+//Hides quiz questions from the page
+for(i = 0; i <quizContent.length; i++){
+  quizContent[i].style.display = 'block';
+}
 
+//Create the quiz questions
 function addQuestion(){
   var score = 0;
 
