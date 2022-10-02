@@ -5,6 +5,9 @@
     display: flex;
     justify-content: space-between;
 }
+#time-Counter{
+    color: rgb(79, 14, 79);
+}
 
 /*Quiz Start Section*/
 .quiz-home-page{
@@ -26,7 +29,7 @@
     align-items: center;
 }
 
-
+/* Footer */
 footer{
     text-align: center;
     position: fixed;
@@ -35,7 +38,5 @@ footer{
     width: 100%;
     color: white;
     font-size: 24px;
-    background-color: rgb(194, 129, 194);
-    
-   
+    background-color: rgb(194, 129, 194);  
 }

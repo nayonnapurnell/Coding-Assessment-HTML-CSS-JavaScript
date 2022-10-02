@@ -1,52 +1,93 @@
-var startButton = document.getElementById("start-quiz-button");
+//Quiz Elements
+var startButton = document.getElementById('start-quiz-button');
+var quizContent = document.querySelectorAll('.quiz-questions');
+var quizQuestions = document.createElement('div');
+
+//Timer Elements
+var startingMinutes = 1;
+var time = startingMinutes * 60;
+var countDownTimer = document.querySelector('#time-Counter');
+
+
+//Hides quiz questions from the page
+for(i = 0; i <quizContent.length; i++){
+  quizContent[i].style.display = 'block';
+}
+
+//Create the quiz questions
+
+
+//Start Button Event Listener
+startButton.addEventListener("click", function(event){
+  
+var interval = setInterval(startTimer, 1000);
 
 
 
-function startTimer(){
+//Quiz Countdown Timer - 5 minutes
+function startTimer() {
+  var minutes = Math.floor(time/60);
+  var seconds = time % 60;
 
+  seconds = seconds < 10 ? '0' + seconds : seconds;
+  countDownTimer.innerHTML = `Time: ${minutes}:${seconds}`;
+  time-- 
+  if (time < 0){
+    clearInterval(interval);
+  } 
 }
 
 
+})
+
+
 function addQuestion(){
+  var score = 0;
 
   var quizQuestions = [
     {
       id: 1,
       question: "Commonly used data-types DO NOT include:",
-      answers: {
+      answerChoice: {
         a: "Strings",
         b: "Booleans",
         c: "alerts",
-        d: "numbers"
+        d: "numbers",
       },
+      answer: "c: alerts"
     },
     {
       id: 2,
       question: "The condition in an if/else statement is enclosed within ____.",
-      answers: {
+      answerChoice: {
       a: "quotes",
       b: "curly brackets",
       c: "parentheses",
-      d: "parentheses"
+      d: "square brackets"
     },
+    answer: "c: parentheses"
     },
     {
       id: 3,
-      question: "Who invented JavaScript?",
-      answers: {
-      a: "Douglas Crockford",
-      b: "Sheryl Sandberg",
-      c: "Brendan Eich"
+      question: "Arrays in JavaScript can be used to store?",
+      answerChoice: {
+      a: "numbers and strings",
+      b: "other arrays",
+      c: "booleans",
+      d: "all of the above"
     },
+    answer: "d: all of the above"
     },
     {
       id: 4,
-      question: "Who invented JavaScript?",
-      answers: {
-      a: "Douglas Crockford",
-      b: "Sheryl Sandberg",
-      c: "Brendan Eich"
+      question: "String values must be enclosed within _______ when being assigned to variables.",
+      answerChoice: {
+      a: "commas",
+      b: "curly brackets",
+      c: "quotes",
+      d: "parentheses"
     },
+    answer: "c: quotes"
     }
   ]
   // create the question elements
@@ -74,6 +115,7 @@ function addQuestion(){
     // go to highscore screen
 }
 
+
 function startQuiz(){
   // timer starts and I am presented with a question
   // need a function call to start the timer
@@ -82,8 +124,6 @@ function startQuiz(){
 
   //set display to either none or block*****
 
-  ans = [];
-  startSection.style.display = "block";
   
 }
 
