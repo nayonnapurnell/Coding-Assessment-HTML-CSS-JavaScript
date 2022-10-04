@@ -18,6 +18,12 @@
     font-size: 32px;
 }
 
+/*Quiz Questions Section*/
+ul {
+    list-style-type: none;
+    text-align: center;
+   }
+
 /*Start Quiz Button*/
 #start-quiz-button{
     background-color: purple;
