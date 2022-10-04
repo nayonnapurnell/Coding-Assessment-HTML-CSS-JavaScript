@@ -19,13 +19,14 @@
 }
 
 /*Quiz Questions Section*/
-ul {
+ul, h2 {
     list-style-type: none;
     text-align: center;
+    font-size: 22px;
    }
-
+   
 /*Start Quiz Button*/
-#start-quiz-button{
+#start-quiz-button, #submit-quiz-button{
     background-color: purple;
     color: white;
     font-size: 24px;

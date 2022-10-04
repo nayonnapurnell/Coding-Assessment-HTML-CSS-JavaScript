@@ -1,8 +1,23 @@
+//Timer Elements
+var startingMinutes = 5;
+var time = startingMinutes * 60;
+var countDownTimer = document.querySelector('#time-Counter');
+
+//Quiz Elements
+var startButton = document.getElementById('start-quiz-button');
+var quizElements = document.getElementById('quiz');
+var quizQuestions = document.getElementById('quiz-question');
+var answerElements = document.querySelectorAll('.answer');
+var a_answerText = document.getElementById('a_answerText');
+var b_answerText = document.getElementById('b_answerText');
+var c_answerText = document.getElementById('c_answerText');
+var d_answerText = document.getElementById('d_answerText');
+var submitButton = document.getElementById('submit-quiz-button');
 
 
+//Quiz Questions
 var quizQuestionsArray = [
   {
-    id: 1,
     question: "Commonly used data-types DO NOT include:",
       a: "Strings",
       b: "Booleans",
@@ -11,7 +26,6 @@ var quizQuestionsArray = [
     answer: "c: alerts"
   },
   {
-    id: 2,
     question: "The condition in an if/else statement is enclosed within ____.",
     a: "quotes",
     b: "curly brackets",
@@ -20,7 +34,6 @@ var quizQuestionsArray = [
   answer: "c: parentheses"
   },
   {
-    id: 3,
     question: "Arrays in JavaScript can be used to store?",
     a: "numbers and strings",
     b: "other arrays",
@@ -29,7 +42,6 @@ var quizQuestionsArray = [
   answer: "d: all of the above"
   },
   {
-    id: 4,
     question: "String values must be enclosed within _______ when being assigned to variables.",
     a: "commas",
     b: "curly brackets",
@@ -40,20 +52,19 @@ var quizQuestionsArray = [
 ];
 
 
+var currentQuiz = 0;
+function showQuiz(){
+  
 
-//Timer Elements
-var startingMinutes = 5;
-var time = startingMinutes * 60;
-var countDownTimer = document.querySelector('#time-Counter');
+  var currentQuestion = quizQuestionsArray[currentQuiz];
+  quizQuestions.innerText = currentQuestion.question;
+  a_answerText.innerText = currentQuestion.a;
+  b_answerText.innerText = currentQuestion.b;
+  c_answerText.innerText = currentQuestion.c;
+  d_answerText.innerText = currentQuestion.d;
 
-//Quiz Elements
-var startButton = document.getElementById('start-quiz-button');
-var quizContent = document.querySelectorAll('.quiz-content');
-var quizQuestions = document.querySelectorAll('.quiz-questions');
+}
 
-
-console.log(quizQuestions);
-console.log("I am here");
 
 
 //Start Button Event Listener
@@ -65,15 +76,16 @@ var interval = setInterval(startTimer, 1000);
       var seconds = time % 60;
 
       seconds = seconds < 10 ? '0' + seconds : seconds;
-      countDownTimer.innerHTML = `Time: ${minutes}:${seconds}`;
+      countDownTimer.innerText = `Time: ${minutes}:${seconds}`;
       time-- 
-      if (time < 0){
+      if (time == 0){
         clearInterval(interval);
       } 
     }; 
     
-    
-    addQuestion();
+  
+
+    showQuiz();
 
 })
 //End of the Start Button code
@@ -86,10 +98,6 @@ var interval = setInterval(startTimer, 1000);
 
   
 
-//Hides quiz questions from the page
-// for(i = 0; i <quizContent.length; i++){
-//   quizContent[i].style.display = 'block';
-// }
 
 
 
@@ -99,21 +107,14 @@ var interval = setInterval(startTimer, 1000);
 
 
 
-//Create the quiz questions
-function addQuestion(){
 
 
-  var nums = [15, 15, 14, 14, 13, 12, 12, 11, 11, 11, 28, 28];
-  
-  for (i = 0; i < arr.length; ++i) {
-    arr[i].textContent = nums[i];
-  }
 
   //var score = 0;
 
  
   // create the question elements
-  //var quizQuestions = document.querySelectorAll('.quiz-questions');
+ 
 
   // modify the text/attributes
   // modify one of the attributes to say right or wrong
@@ -136,34 +137,9 @@ function addQuestion(){
 
     // if no other questions,
     // go to highscore screen
-}
 
 
-function startQuiz(){
-  // timer starts and I am presented with a question
-  // need a function call to start the timer
 
-  // need a function call to present the question
-
-  //set display to either none or block*****  
-}
-
-
-/*{ <div class="score"></div>
-<div class="score"></div>
-<div class="score"></div>
-<div class="score"></div>
-<div class="score"></div>
-<div class="score"></div>
-<div class="score"></div>
-<div class="score"></div>
-<div class="score"></div>
-<div class="score"></div>
-<div class="score"></div>
-<div class="score"></div>
-<div class="score"></div>
-<div class="score"></div>
-<div class="score"></div> }*/
 
 
 
