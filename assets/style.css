@@ -19,11 +19,15 @@
 }
 
 /*Quiz Questions Section*/
-ul, h2 {
+ol, h2 {
     list-style-type: none;
     text-align: center;
     font-size: 22px;
    }
+li{
+    text-align: left;
+    justify-content: center;
+}
 
 .quiz-content{
     display: none;

@@ -4,9 +4,11 @@ var time = startingMinutes * 60;
 var countDownTimer = document.querySelector('#time-Counter');
 
 //Quiz Elements
+var quizHomePage = document.querySelector('.quiz-home-page')
 var startButton = document.getElementById('start-quiz-button');
 var quizElements = document.getElementById('quiz');
 var quizContainer = document.querySelector('.quiz-content');
+quizContainer.style.color = "blue";
 var quizQuestions = document.getElementById('quiz-question');
 var answerElements = document.querySelectorAll('.answer');
 var a_answerText = document.getElementById('a_answerText');
@@ -55,7 +57,6 @@ var quizQuestionsArray = [
 
 var currentQuiz = 0;
 function showQuiz(){
-  
   quizContainer.style.display = "block";
   var currentQuestion = quizQuestionsArray[currentQuiz];
   quizQuestions.innerText = currentQuestion.question;
@@ -70,6 +71,7 @@ function showQuiz(){
 startButton.addEventListener("click", function(event){
 //Quiz Countdown Timer - 5 minutes
 
+quizHomePage.style.display = "none";
 var interval = setInterval(startTimer, 1000);
     function startTimer() {    
       var minutes = Math.floor(time/60);
