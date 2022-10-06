@@ -22,7 +22,7 @@
                 <p id="game-instructions">
                     Try to answer the following code-related questions within the time limit.  Keep in mind that incorrect answers will penalize your score/time by ten seconds!
                 </p>
-                <button id= "start-quiz-button">Start Quiz</button>
+                <button id="start-quiz-button">Start Quiz</button>
             </section>
             <section id="quiz"> 
                 <div class="quiz-content"> 
@@ -46,16 +46,25 @@
                         </li>
                     </ol> 
                 <button id= "submit-quiz-button">Submit</button>
-            </div> 
-                <div class="score"></div>
+                </div>   
             </section>
-            <section id="quiz-results">
-
+            <section class="save-score">
+                <div>
+                    <h2>All done!</h2>
+                    <p>Your final score is: </p>
+                    <label for="initials">Enter initials:</label>
+                    <input type="text" id="initials" name="initials">
+                    <input type="submit" value="Submit">
+                </div>
             </section>
-            <section id="score-history">
-
+            <section class="score-history">
+                <div>
+                    <h2>Highscores</h2>
+                    <button id= "go-back-button">Go Back</button>
+                    <button id= "clear-score-button">Clear Highscores</button>
+                </div>
             </section>
-
+            
         </section>  
     </main>
     <footer>
