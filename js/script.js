@@ -6,7 +6,6 @@ var countDownTimer = document.querySelector('#time-Counter');
 //Quiz Elements
 var startButton = document.getElementById('start-quiz-button');
 var quizElements = document.getElementById('quiz');
-//class="quiz-content"
 var quizContainer = document.querySelector('.quiz-content');
 var quizQuestions = document.getElementById('quiz-question');
 var answerElements = document.querySelectorAll('.answer');
@@ -70,25 +69,39 @@ function showQuiz(){
 //Start Button Event Listener
 startButton.addEventListener("click", function(event){
 //Quiz Countdown Timer - 5 minutes
+
 var interval = setInterval(startTimer, 1000);
-    function startTimer() {
+    function startTimer() {    
       var minutes = Math.floor(time/60);
       var seconds = time % 60;
-
-      seconds = seconds < 10 ? '0' + seconds : seconds;
+      seconds = seconds < 10 ? '0' + seconds : seconds; 
       countDownTimer.innerText = `Time: ${minutes}:${seconds}`;
-      time-- 
-      if (time == 0){
+      if (time === 0){
         clearInterval(interval);
       } 
+      time --;
     }; 
-    
-  
 
     showQuiz();
-
 })
 //End of the Start Button code
+
+
+//Function to capture the selected answer
+function getSelectedAnswer(){
+
+
+}
+
+
+//Submit Button Event Listener
+submitButton.addEventListener("click", function(event){
+ //User selects an answer
+//User selects the submit button
+//answer is stored in the cache
+
+})
+
 
 
 
