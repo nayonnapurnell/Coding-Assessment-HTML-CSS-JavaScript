@@ -6,6 +6,8 @@ var countDownTimer = document.querySelector('#time-Counter');
 //Quiz Elements
 var startButton = document.getElementById('start-quiz-button');
 var quizElements = document.getElementById('quiz');
+//class="quiz-content"
+var quizContainer = document.querySelector('.quiz-content');
 var quizQuestions = document.getElementById('quiz-question');
 var answerElements = document.querySelectorAll('.answer');
 var a_answerText = document.getElementById('a_answerText');
@@ -55,16 +57,14 @@ var quizQuestionsArray = [
 var currentQuiz = 0;
 function showQuiz(){
   
-
+  quizContainer.style.display = "block";
   var currentQuestion = quizQuestionsArray[currentQuiz];
   quizQuestions.innerText = currentQuestion.question;
   a_answerText.innerText = currentQuestion.a;
   b_answerText.innerText = currentQuestion.b;
   c_answerText.innerText = currentQuestion.c;
   d_answerText.innerText = currentQuestion.d;
-
 }
-
 
 
 //Start Button Event Listener

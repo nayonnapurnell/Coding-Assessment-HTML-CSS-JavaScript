@@ -24,7 +24,12 @@ ul, h2 {
     text-align: center;
     font-size: 22px;
    }
+
+.quiz-content{
+    display: none;
+}
    
+
 /*Start Quiz Button*/
 #start-quiz-button, #submit-quiz-button{
     background-color: purple;
