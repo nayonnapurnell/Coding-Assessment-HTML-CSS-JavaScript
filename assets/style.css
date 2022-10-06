@@ -1,5 +1,4 @@
 /*Quiz Home Page*/
-
 /* High-Score and Timer Header */
 .page-header{
     display: flex;
@@ -19,15 +18,42 @@
 }
 
 /*Quiz Questions Section*/
-ol, h2 {
-    list-style-type: none;
+h2 {
     text-align: center;
     font-size: 22px;
+    display: block;
    }
-li{
-    text-align: left;
+
+ ol{
+    list-style-type: none;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0;
+    display: block;
+    font-size: 22px;
+    
+}  
+#quiz{
+    display: flex;
+    align-items: center;
     justify-content: center;
 }
+#a, #b, #c, #d{
+    list-style-type: none;
+    font-size: 22px;
+    align-items: center;
+    margin: 0 auto;
+    
+}
+
+/* #a, #b, #c, #d{
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    display: flex;
+} */
+
 
 .quiz-content{
     display: none;
