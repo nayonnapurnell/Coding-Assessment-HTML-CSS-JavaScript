@@ -72,6 +72,7 @@ startButton.addEventListener("click", function(event){
 //Quiz Countdown Timer - 5 minutes
 
 quizHomePage.style.display = "none";
+submitButton.style.display = "none";
 var interval = setInterval(startTimer, 1000);
     function startTimer() {    
       var minutes = Math.floor(time/60);
