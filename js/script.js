@@ -16,7 +16,7 @@ var b_answerText = document.getElementById('b_answerText');
 var c_answerText = document.getElementById('c_answerText');
 var d_answerText = document.getElementById('d_answerText');
 var submitButton = document.getElementById('submit-quiz-button');
-var scoreHistory = document.getElementByClassName('score-history');
+//var scoreHistory = document.getElementByClassName('score-history');
 
 
 //Quiz Questions
@@ -128,38 +128,6 @@ submitButton.addEventListener("click", function(event){
 
 
 
-
-
-
-
-
-  //var score = 0;
-
- 
-  // create the question elements
- 
-
-  // modify the text/attributes
-  // modify one of the attributes to say right or wrong
-
-  // append all elements to something on the page
-
-  // for all the buttons, add event listener
-
-    // WHEN I answer a question
-    // if answered correctly
-    // add points
-    // show as correct
-    // WHEN I answer a question incorrectly
-    // THEN time is subtracted from the clock
-    // show as incorrect
-
-    // after the answer, 
-    // THEN I am presented with another question
-    // need a function call to present the question
-
-    // if no other questions,
-    // go to highscore screen
 
 
 
