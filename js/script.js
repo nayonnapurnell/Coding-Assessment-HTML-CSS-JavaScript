@@ -16,7 +16,7 @@ var b_answerText = document.getElementById('b_answerText');
 var c_answerText = document.getElementById('c_answerText');
 var d_answerText = document.getElementById('d_answerText');
 var submitButton = document.getElementById('submit-quiz-button');
-//var scoreHistory = document.getElementByClassName('score-history');
+var scoreHistory = document.getElementByClassName('score-history');
 
 
 //Quiz Questions
@@ -55,7 +55,7 @@ var quizQuestionsArray = [
   }
 ];
 
-
+/*showQuiz function*/
 var currentQuiz = 0;
 function showQuiz(){
   quizContainer.style.display = "block";
@@ -97,6 +97,11 @@ function getSelectedAnswer(){
 
 
 }
+
+//Selected Answer Event Listener
+answerElements.addEventListener('click', getSelectedAnswer);
+
+
 
 
 //Submit Button Event Listener
