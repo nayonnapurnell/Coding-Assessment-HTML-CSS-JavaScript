@@ -15,6 +15,8 @@ var a_answerText = document.getElementById('a_answerText');
 var b_answerText = document.getElementById('b_answerText');
 var c_answerText = document.getElementById('c_answerText');
 var d_answerText = document.getElementById('d_answerText');
+var answerResponse = document.getElementById('answer-response');
+
 var submitButton = document.getElementById('submit-quiz-button');
 //var scoreHistory = document.getElementByClassName('score-history');
 
@@ -22,14 +24,16 @@ var submitButton = document.getElementById('submit-quiz-button');
 //Quiz Questions
 var quizQuestionsArray = [
   {
+    id: 1,
     question: "Commonly used data-types DO NOT include:",
       a: "Strings",
       b: "Booleans",
-      c: "alerts",
-      d: "numbers",
+      c: "Alerts",
+      d: "Numbers",
     answer: "c: alerts"
   },
   {
+    id: 2,
     question: "The condition in an if/else statement is enclosed within ____.",
     a: "quotes",
     b: "curly brackets",
@@ -38,6 +42,7 @@ var quizQuestionsArray = [
   answer: "c: parentheses"
   },
   {
+    id: 3,
     question: "Arrays in JavaScript can be used to store?",
     a: "numbers and strings",
     b: "other arrays",
@@ -46,6 +51,7 @@ var quizQuestionsArray = [
   answer: "d: all of the above"
   },
   {
+    id: 4,
     question: "String values must be enclosed within _______ when being assigned to variables.",
     a: "commas",
     b: "curly brackets",
@@ -87,19 +93,88 @@ var interval = setInterval(startTimer, 1000);
     quizHomePage.style.display = "none";
     showQuiz();
     submitButton.style.display = "none";
-    scoreHistory.style.display = "none";
+    //scoreHistory.style.display = "none";
 })
 //End of the Start Button code
 
 
+
+
 //Function to capture the selected answer
 function getSelectedAnswer(){
+//Selected Answer Event Listener
+
+
+
+  
+
+var allQuizLi = document.getElementById('codingAnswers');  
+var childrenLi = allQuizLi.children;
+//console.log(allQuizLi.firstElementChild);  
+console.log(childrenLi);
+
+
+
+// if(ele[0].checked){
+//   document.getElementById("answer-response").innerText
+//    = quizQuestionsArray[0].a + " is the wrong answer!";
+// }
+// if(ele[1].checked){
+//   document.getElementById("answer-response").innerText
+//    = quizQuestionsArray[1].b + " is the wrong answer!";
+// }
+
+
+    // if(ele[0].checked){
+    //   document.getElementById("answer-response").innerText
+    //   = quizQuestionsArray[0].a + " is the wrong answer!";
+    // }if(ele[1].checked){
+    //   document.getElementById("answer-response").innerText
+    //   = quizQuestionsArray[1].b + " is the wrong answer!";
+    // }
+
 
 
 }
+//Event Listener listening for the radio button click
+var answerEl = document.querySelectorAll('input');
+answerEl[0].addEventListener("click", getSelectedAnswer);
+for(var answer of answerEl){
+  answer.addEventListener("click", function onClick() {
 
-//Selected Answer Event Listener
-answerElements.addEventListener('click', getSelectedAnswer);
+
+    
+    for(i=0; i <quizQuestionsArray.length; i++){
+      console.log(quizQuestionsArray.answer);
+
+    }
+    // if (answerEl[0].checked){
+    //   console.log("Radio a button clicked");
+    //   document.getElementById("answer-response").innerText =
+    //   quizQuestionsArray[0].a + " is the wrong answer!";  
+    // }
+    // else if(answerEl[1].checked){
+    //   console.log("Radio b button clicked");
+    //   document.getElementById("answer-response").innerText =
+    //   quizQuestionsArray[0].b + " is the wrong answer!";  
+    // }
+    // else if(answerEl[2].checked){
+    //   console.log("Radio c button clicked");
+    //   document.getElementById("answer-response").innerText =
+    //   quizQuestionsArray[0].c + " is the CORRECT answer!";  
+    // }
+    // else if(answerEl[3].checked){
+    //   console.log("Radio d button clicked");
+    //   document.getElementById("answer-response").innerText =
+    //   quizQuestionsArray[0].d + " is the wrong answer!";  
+    // }
+  })
+}
+
+
+  
+
+
 
 
 
