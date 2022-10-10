@@ -104,49 +104,62 @@ var interval = setInterval(startTimer, 1000);
 function getSelectedAnswer(){
 //Selected Answer Event Listener
 
-
+var allQuizLi = document.getSelectorAll('input[name="answers"]:checked').value;
+onsole.log(allQuizLi);
 
   
 
-var allQuizLi = document.getElementById('codingAnswers');  
-var childrenLi = allQuizLi.children;
-//console.log(allQuizLi.firstElementChild);  
-console.log(childrenLi);
- // if (answerEl[0].checked){
-    //   console.log("Radio a button clicked");
-    //   document.getElementById("answer-response").innerText =
-    //   quizQuestionsArray[0].a + " is the wrong answer!";  
-    // }
-    // else if(answerEl[1].checked){
-    //   console.log("Radio b button clicked");
-    //   document.getElementById("answer-response").innerText =
-    //   quizQuestionsArray[0].b + " is the wrong answer!";  
-    // }
-    // else if(answerEl[2].checked){
-    //   console.log("Radio c button clicked");
-    //   document.getElementById("answer-response").innerText =
-    //   quizQuestionsArray[0].c + " is the CORRECT answer!";  
-    // }
-    // else if(answerEl[3].checked){
-    //   console.log("Radio d button clicked");
-    //   document.getElementById("answer-response").innerText =
-    //   quizQuestionsArray[0].d + " is the wrong answer!";  
-    // }
+//var allQuizLi = document.getElementById('codingAnswers');  
+//var childrenLi = allQuizLi.children;
 
-
-
-
+// if (answerEl[0].checked){
+//   console.log("Radio a button clicked");
+//   document.getElementById("answer-response").innerText =
+//   quizQuestionsArray[0].a + " is the wrong answer!";  
+// }
+// else if(answerEl[1].checked){
+//   console.log("Radio b button clicked");
+//   document.getElementById("answer-response").innerText =
+//   quizQuestionsArray[0].b + " is the wrong answer!";  
+// }
+// else if(answerEl[2].checked){
+//   console.log("Radio c button clicked");
+//   document.getElementById("answer-response").innerText =
+//   quizQuestionsArray[0].c + " is the CORRECT answer!";  
+// }
+// else if(answerEl[3].checked){
+//   console.log("Radio d button clicked");
+//   document.getElementById("answer-response").innerText =
+//   quizQuestionsArray[0].d + " is the wrong answer!";  
+// } 
 
 
 }
-//Event Listener listening for the radio button click
+//Event Listener listening for the radio button clicks on each question
 var answerEl = document.querySelectorAll('input');
-answerEl[0].addEventListener("click", getSelectedAnswer);
-for(var answer of answerEl){
-  answer.addEventListener("click", function onClick() {
-  quizQuestionsArray.forEach((question) => console.log(question));  
-  })
-}
+var checkRadio = document.querySelector('input[name="answers"]:checked');
+
+// for(var answer of answerEl){
+//   answer.addEventListener("click", function onClick() {
+//     if(document.getElementById("a").checked == true){
+//      console.log("Printing" + answerEl);
+//     }
+//   })
+// }
+    
+
+    
+      
+
+
+
+  // quizQuestionsArray.forEach((question) => 
+  //  console.log(question)
+  
+  //  ); 
+
+
+
 
 
   
